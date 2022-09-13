@@ -1,22 +1,27 @@
-﻿using System.Reflection.Metadata.Ecma335;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using HDK700.Models;
 
 namespace HDK700.Controllers;
 
-public class HomeController : Controller
+public class StudentController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<StudentController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public StudentController(ILogger<StudentController> logger)
     {
         _logger = logger;
     }
-
-    public IActionResult Index(String FullName, String Email)
+    public IActionResult Index()
     {
-        ViewBag.name = "Cập Nhật Thông Tin:" + " " + FullName + " " + Email;
+        return View();
+    }
+    
+    [HttpPost]
+    public IActionResult Index(Student std)
+    {
+        std.StudentName = "Tin Học Kinh Tế";
+        ViewBag.mess = std.StudentID;
         return View();
     }
 
