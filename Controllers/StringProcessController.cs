@@ -12,7 +12,7 @@ namespace HDK700.Controllers
       {
             return View();
       }
-      //acction de nhan du loieu gui len
+      
       [HttpPost]
       public IActionResult Index(string strInput )
       {
@@ -26,7 +26,7 @@ namespace HDK700.Controllers
       {
             return View();
       }
-      //acction de nhan du loieu gui len
+      
       [HttpPost]
       public IActionResult Lower(string strInput )
       {
@@ -40,7 +40,7 @@ namespace HDK700.Controllers
       {
             return View();
       }
-      //acction de nhan du loieu gui len
+      
       [HttpPost]
       public IActionResult Upper(string strInput )
       {
@@ -55,7 +55,7 @@ namespace HDK700.Controllers
       {
             return View();
       }
-      //acction de nhan du loieu gui len
+      
       [HttpPost]
       public IActionResult Capone(string strInput )
       {
@@ -69,7 +69,7 @@ namespace HDK700.Controllers
       {
             return View();
       }
-      //acction de nhan du loieu gui len
+      
       [HttpPost]
       public IActionResult Remove(string strInput )
       {
@@ -79,14 +79,14 @@ namespace HDK700.Controllers
         return View();
      }
      StringProcess strPrCF =new StringProcess();
-       public IActionResult Capfirst()
+       public IActionResult CapitalizeFirst()
       {
             return View();
       }
     
-      //acction de nhan du loieu gui len
+      
       [HttpPost]
-      public IActionResult Capfirst(string strInput )
+      public IActionResult CapitalizeFirst(string strInput )
       {
         string strResult= strPro.CapitalizeFirstCharacter(strInput);
         ViewBag.mess = strResult;

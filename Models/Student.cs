@@ -1,10 +1,9 @@
-namespace HDK700.Models
-{
+using System.Data;
+namespace H.Models{
     public class Student
     {
-        public int StudentID { get; set; }
-        public string StudentName { get; set; }
-        public int StudentAge { get; set; }
-        public string StudentEmail { get; set; }
+        public string? ID {get; set;}
+        public string? StudentID {get; set;}
+        public string? Studentname {get; set;}
     }
 }
